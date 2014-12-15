@@ -3,7 +3,7 @@
 
 
 
-    <title>letter land</title>
+    <title>autocave</title>
 
 
 
@@ -12,6 +12,7 @@
          .canvas {
 		 width:800;
 		 height:600;
+                 cursor: none;
 		 }
 
 
@@ -23,9 +24,21 @@
 
 </head>
 <body>
+<input type="button" id="surv1" value="killall"   onclick="creatures=[];" >
+<input type="button" id="surv1" value="sprawl"   onclick="change_rules('city_sprawl')" >
+<input type="button" id="surv1" value="chumpy"   onclick="change_rules('chumpy')" >
+<input type="button" id="surv1" value="city_cave"   onclick="change_rules('city_cave')" >
+<input type="button" id="surv1" value="random gun"   onclick="guy.gun.size = rand(1, 15); guy.gun.speed = rand(1, 15); guy.gun.multi = 1; guy.gun.damage=rand(1,10) + 1; guy.gun.graphic=rand(0, 9); guy.gun.deviance = rand(1, 23);" >
+<input type="button" id="surv1" value="distance from center"   onclick="alert(guy.x + ' ' + guy.y + ' '+ (lineDistance(guy.x/10, guy.y/10, 500, 500)/5))" > 
+<input type="button" id="surv1" value="go to center"   onclick="guy.x = 5000; guy.y = 5000; guy.px = 5000; guy.py = 5000;" > 
+<input type="button" id="surv1" value="toggle gravity"   onclick="if (gravity == 0) {gravity = 1;} else {gravity = 0;}" > 
 
 
-	<canvas class=".canvas" id="main" width="800px" height="600px"> </canvas>
+<br> 
+	<canvas class=".canvas" id="main" width="580px" height="350px"> </canvas>
+
+
+
 
    <script type="text/javascript" src="little.js"></script>
 
